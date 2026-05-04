@@ -57,15 +57,15 @@ export default function AppShell({ title, subtitle, badge, tabs, activeTab, onTa
             <button
               key={tab.id}
               onClick={() => onTabChange(tab.id)}
-              className={`flex-1 flex flex-col items-center gap-1 py-3.5 transition-all duration-200 relative ${
+              className={`flex-1 flex flex-col items-center gap-0.5 py-3 transition-all duration-200 relative ${
                 activeTab === tab.id ? "text-amber" : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {activeTab === tab.id && (
-                <span className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-amber rounded-b-full" />
+                <span className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-amber rounded-b-full" />
               )}
-              <Icon name={tab.icon} size={21} />
-              <span className="text-[11px] font-semibold uppercase tracking-wider">{tab.label}</span>
+              <Icon name={tab.icon} size={19} />
+              <span className="text-[10px] font-semibold uppercase tracking-wide">{tab.label}</span>
             </button>
           ))}
         </div>

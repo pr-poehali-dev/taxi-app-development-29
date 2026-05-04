@@ -7,21 +7,30 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
-			"./1777908932186310708.html"
+		"./1777908932186310708.html"
 	],
 	prefix: "",
 	theme: {
 		container: {
 			center: true,
 			padding: '2rem',
-			screens: {
-				'2xl': '1400px'
-			}
+			screens: { '2xl': '1400px' }
 		},
 		extend: {
 			fontFamily: {
-				golos: ['Golos Text', 'sans-serif'],
+				sans: ['Montserrat', 'sans-serif'],
+				montserrat: ['Montserrat', 'sans-serif'],
 				mono: ['IBM Plex Mono', 'monospace'],
+			},
+			fontSize: {
+				'xs': ['0.8rem', { lineHeight: '1.2rem' }],
+				'sm': ['0.925rem', { lineHeight: '1.4rem' }],
+				'base': ['1.05rem', { lineHeight: '1.6rem' }],
+				'lg': ['1.2rem', { lineHeight: '1.75rem' }],
+				'xl': ['1.35rem', { lineHeight: '1.9rem' }],
+				'2xl': ['1.6rem', { lineHeight: '2.1rem' }],
+				'3xl': ['2rem', { lineHeight: '2.4rem' }],
+				'4xl': ['2.5rem', { lineHeight: '3rem' }],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -66,7 +75,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				amber: {
+					DEFAULT: 'hsl(var(--amber))',
+					dim: 'hsl(var(--amber-dim))',
+				},
+				teal: { DEFAULT: 'hsl(var(--teal))' },
+				rust: { DEFAULT: 'hsl(var(--rust))' },
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -87,15 +102,20 @@ export default {
 					to: { opacity: '1' }
 				},
 				'slide-up': {
-					from: { opacity: '0', transform: 'translateY(16px)' },
+					from: { opacity: '0', transform: 'translateY(20px)' },
 					to: { opacity: '1', transform: 'translateY(0)' }
+				},
+				'scale-in': {
+					from: { opacity: '0', transform: 'scale(0.92)' },
+					to: { opacity: '1', transform: 'scale(1)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.4s ease forwards',
-				'slide-up': 'slide-up 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+				'fade-in': 'fade-in 0.35s ease forwards',
+				'slide-up': 'slide-up 0.4s cubic-bezier(0.16,1,0.3,1) forwards',
+				'scale-in': 'scale-in 0.3s cubic-bezier(0.16,1,0.3,1) forwards',
 			}
 		}
 	},
